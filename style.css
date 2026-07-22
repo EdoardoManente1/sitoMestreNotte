@@ -87,6 +87,26 @@ body {
 .hero-actions { display:flex; gap:1rem; }
 .btn-outline { background: transparent; border:1px solid var(--text-primary); color:var(--text-primary); }
 
+/* Bombon logo */
+.bombon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.bombon-logo {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    background: white;
+    padding: 6px;
+}
+
+.bombon-caption h3 { margin: 0 0 0.25rem 0; font-size: 1rem; }
+.bombon-caption p { margin: 0; color: var(--text-secondary); font-size: 0.95rem; }
+
 /* Contact */
 .contact-grid {
     display: grid;
