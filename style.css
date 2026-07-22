@@ -1,0 +1,306 @@
+/* CSS RESET & VARIABLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #0a0a0a;
+    --surface-color: #121212;
+    --border-color: #262626;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --font-main: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Helpers */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.services {
+    align-items: stretch;
+}
+
+.service-card {
+    background: linear-gradient(180deg, #141414 0%, #0f0f0f 100%);
+    border: 1px solid var(--border-color);
+    padding: 1.75rem;
+    border-radius: 10px;
+    min-height: 140px;
+}
+
+.service-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    align-items: start;
+}
+
+.about-text p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.about-text ul {
+    margin-top: 0.75rem;
+    color: var(--text-secondary);
+    list-style: disc inside;
+}
+
+.about-highlights .highlight {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.header-cta .cta-link {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--text-primary);
+    padding: 0.5rem 0.9rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hero-actions { display:flex; gap:1rem; }
+.btn-outline { background: transparent; border:1px solid var(--text-primary); color:var(--text-primary); }
+
+/* Contact */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    align-items: start;
+}
+
+.contact-form {
+    background-color: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.6rem 0.75rem;
+    border-radius: 6px;
+}
+
+.contact-info a { color: var(--text-primary); text-decoration: none; }
+
+/* HEADER & NAV */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--text-primary);
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 5%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero span.badge {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    border: 1px solid var(--border-color);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    max-width: 600px;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    padding: 1rem 2.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* SECTIONS GENERAL */
+section {
+    padding: 5rem 5%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+/* FORMAT & DJ SECTION */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* EVENTS SECTION */
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.event-date {
+    font-weight: 800;
+    font-size: 1.2rem;
+    min-width: 140px;
+}
+
+.event-details h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.event-details span {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.event-status {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid var(--border-color);
+    padding: 0.3rem 0.8rem;
+}
+
+/* FOOTER */
+footer {
+    padding: 3rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+    }
+    .event-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .grid-3 { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+}
